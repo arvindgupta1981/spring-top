@@ -4,4 +4,12 @@
   <artifactId>Spring</artifactId>
   <name>Spring-main</name>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>AOP</module>
+  	<module>Spring-CORE</module>
+  	<module>Spring-DAO</module>
+  	
+  	<module>Spring-MVC</module>
+  </modules>
 </project>
