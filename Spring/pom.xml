@@ -1,15 +1,65 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Soring-top</groupId>
-  <artifactId>Spring</artifactId>
-  <name>Spring-main</name>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>AOP</module>
-  	<module>Spring-CORE</module>
-  	<module>Spring-DAO</module>
-  	
-  	<module>Spring-MVC</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Soring-top</groupId>
+	<artifactId>Spring</artifactId>
+	<name>Spring-main</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://localhost:8080/artifactory/repo</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>http://localhost:8080/artifactory/repo</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>http://localhost:8080/artifactory/repo</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>snapshots</id>
+			<url>http://localhost:8080/artifactory/repo</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+	<build>
+	<pluginManagement>
+	<plugins>
+	<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-compiler-plugin</artifactId>
+	<!-- best lock down version of the plugin too -->
+	<configuration>
+	<source>1.5</source>
+	<target>1.5</target>
+	</configuration>
+	</plugin>
+	</plugins>
+	</pluginManagement>
+	</build> 
+
+	<modules>
+		<module>AOP</module>
+		<module>Spring-CORE</module>
+		<module>Spring-DAO</module>
+		<module>Spring-MVC</module>
+		<module>Spring-JUNIT</module>
+	</modules>
+
 </project>
