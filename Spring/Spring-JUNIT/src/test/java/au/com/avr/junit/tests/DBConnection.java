@@ -8,7 +8,7 @@ public class DBConnection {
 	
 	private static Connection con=null;
 	private DBConnection(){}
-	public Connection getConnection(){
+	public static Connection getConnection(){
 		if(con==null){
 			try {
 				Class.forName(ConnectionParameters.dbClass);
