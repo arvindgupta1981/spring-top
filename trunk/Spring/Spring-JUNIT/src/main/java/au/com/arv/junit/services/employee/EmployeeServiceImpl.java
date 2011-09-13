@@ -8,8 +8,16 @@ import au.com.arv.junit.pojo.employee.Employee;
 
 public class EmployeeServiceImpl implements EmployeeService{
 	private EmployeeDAO employeeDAO;
+	public EmployeeDAO getEmployeeDAO() {
+		return employeeDAO;
+	}
+
+	public void setEmployeeDAO(EmployeeDAO employeeDAO) {
+		this.employeeDAO = employeeDAO;
+	}
+
 	public EmployeeServiceImpl(){
-		employeeDAO=new EmployeeDAOImpl();
+		//employeeDAO=new EmployeeDAOImpl();
 	}
 	
 	public boolean add(Employee employee) throws Exception {

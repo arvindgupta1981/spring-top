@@ -15,6 +15,11 @@
 		<version>4.8.1</version>
 	</dependency>
 	<dependency>
+	  <groupId>org.easymock</groupId>
+	  <artifactId>easymock</artifactId>
+	  <version>2.4</version>
+	</dependency>
+	<dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
 		<version>5.1.9</version>
@@ -58,7 +63,7 @@
               <sqlCommand>drop database junittest</sqlCommand> -->
               <!-- ignore error when database is not avaiable -->
               <srcFiles>
-                <srcFile>src/main/sql/timesheettest	.sql</srcFile>
+                <srcFile>src/main/sql/timesheettest.sql</srcFile>
               </srcFiles>
              
               <onError>continue</onError>
