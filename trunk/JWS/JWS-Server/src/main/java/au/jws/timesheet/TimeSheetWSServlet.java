@@ -10,7 +10,7 @@ import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
-@SOAPBinding(style=Style.RPC)
+@SOAPBinding(style=Style.DOCUMENT)
 public class TimeSheetWSServlet  {
 	
 	public List<String> getTimeSheet(int personId) {
