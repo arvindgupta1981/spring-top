@@ -19,24 +19,26 @@
 	<build>
 		<plugins>
 			<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxws-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <packageName>au.com.jws.client</packageName>
-                    <wsdlUrls>
-                        <wsdlUrl>
-                            http://localhost:8080/JWS-Server/TimeSheetWS?wsdl
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<packageName>au.com.jws.timesheet.tools.artifect</packageName>
+					<wsdlUrls>
+						<wsdlUrl>
+							http://localhost:8080/JWS-Server/TimeSheetWS?wsdl
                         </wsdlUrl>
-                    </wsdlUrls>
-                </configuration>
-            </plugin>
+					</wsdlUrls>
+					<sourceDestDir>${basedir}/src/main/java</sourceDestDir>
+					<destDir>${basedir}/target/jaxws</destDir>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
@@ -49,10 +51,17 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>WsClient</mainClass>
+					<mainClass>au.com.jws.client.TimeSheetClient</mainClass>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
 
 		</plugins>
 
