@@ -15,8 +15,8 @@ public class TimeSheetWSServlet  {
 	
 	public List<String> getTimeSheet(int personId) {
 		List<String> list=new ArrayList<String>();
-		list.add("Arvind");
-		list.add("Gupta");
+		list.add("Vishal");
+		list.add("Mahajan");
 		return list;
 	}	
 }
